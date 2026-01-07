@@ -1,0 +1,18 @@
+# ABOUTME: Cloudflare Workers configuration for Sinuous Development website
+# ABOUTME: Configures static asset serving from the public directory
+
+name = "sinuous-web"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./public"
+
+# Custom domain configuration
+[[routes]]
+pattern = "sinuous.dev"
+custom_domain = true
+
+[[routes]]
+pattern = "www.sinuous.dev"
+custom_domain = true
