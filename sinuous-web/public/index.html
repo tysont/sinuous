@@ -123,6 +123,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* Slow fade out on definition words */
+        .definition-word {
+            color: #737373;
+            transition: color 800ms ease-out;
+            cursor: default;
+        }
+        .definition-word:hover {
+            color: #ffffff;
+            transition: color 200ms ease-out;
+        }
     </style>
 </head>
 <body class="relative">
@@ -183,10 +194,12 @@
             </h1>
 
             <!-- Tagline -->
-            <p class="text-lg md:text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed opacity-0 animate-in-up delay-100 font-light">
-                <span class="italic text-neutral-500">sin·u·ous</span> <span class="text-neutral-600">(adj.):</span> <span class="text-neutral-500">winding, flowing, serpentine</span><br>
-                An AI-native studio. The fluid path from concept to creation, on repeat.
-            </p>
+            <div class="text-lg md:text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed opacity-0 animate-in-up delay-100 font-light">
+                <p class="mb-4">
+                    <span class="italic text-neutral-500">sin·u·ous</span> <span class="text-neutral-600">(adj.):</span> <span class="definition-word">winding</span>, <span class="definition-word">flowing</span>, <span class="definition-word">serpentine</span>
+                </p>
+                <p>An AI-native studio. The fluid path from concept to creation, on repeat.</p>
+            </div>
 
             <!-- Scroll Indicator -->
             <div class="absolute bottom-[-15vh] left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0 animate-in-up delay-300">
